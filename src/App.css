@@ -1,0 +1,28 @@
+header {
+  background-color: wheat;
+  color: maroon;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+ul>li {
+  list-style-type: none;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: wheat;
+  padding: 10px;
+}
+
+.outlet {
+  height: 100dvh;
+}
