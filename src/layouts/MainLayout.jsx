@@ -18,6 +18,9 @@ function MainLayout() {
                         <li>
                             <Link to="/javascript">JS</Link>
                         </li>
+                        <li>
+                            <Link to="/contact">Contact Us</Link>
+                        </li>
                     </ul>
                 </nav>
             </header>
