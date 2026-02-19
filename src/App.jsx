@@ -1,13 +1,15 @@
 import React from "react";
 import { RouterProvider } from "react-router-dom";
 import router from "./routes/router";
-import ThemeProvider from "./context/ThemeProvider";
 import "./App.css";
+import ThemeProvider from "./context/ThemeProvider";
 
 function App() {
     return (
         <ThemeProvider>
-            <RouterProvider router={router} />
+            <div className="container">
+                <RouterProvider router={router} />;
+            </div>
         </ThemeProvider>
     );
 }

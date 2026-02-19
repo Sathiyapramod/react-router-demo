@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import INITIAL_BOOK_LIST from "../config/books";
+import Book from "../components/Book";
 
 function BookList() {
     const [books, setBooks] = useState(INITIAL_BOOK_LIST);
@@ -7,16 +8,16 @@ function BookList() {
         <div>
             <h1>My List of Books</h1>
             <div className="book-list">
-                {books.map((eachBook, index) => {
+                {books.map((eachBook) => {
                     return (
-                        <div key={index} className="book-card">
-                            <img src={eachBook.poster} alt={eachBook.name} className="poster" />
-                            <div>
-                                <h2>{eachBook.name}</h2>
-                                <span>{eachBook.rating}</span>
-                            </div>
-                            <div className="summary">{eachBook.summary}</div>
-                        </div>
+                        <Book
+                            key={eachBook.id}
+                            poster={eachBook.poster}
+                            name={eachBook.name}
+                            rating={eachBook.rating}
+                            summary={eachBook.summary}
+                            bookId={eachBook.id}
+                        />
                     );
                 })}
             </div>
