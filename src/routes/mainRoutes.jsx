@@ -3,6 +3,7 @@ import Css from "../pages/Css";
 import Html from "../pages/Html";
 import JavaScript from "../pages/JavaScript";
 import Contact from "../pages/Contact";
+import BookList from "../pages/BookList";
 // importing main layout
 import MainLayout from "../layouts/MainLayout";
 
@@ -26,6 +27,10 @@ const mainRoutes = {
         {
             path: "/contact",
             element: <Contact />,
+        },
+        {
+            path: "/books",
+            element: <BookList />,
         },
     ],
 };
