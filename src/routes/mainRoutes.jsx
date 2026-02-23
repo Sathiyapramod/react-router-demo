@@ -6,6 +6,7 @@ import Contact from "../pages/Contact";
 import BookList from "../pages/BookList";
 import ViewBook from "../pages/ViewBook";
 import CreateBook from "../pages/CreateBook";
+import EditBook from "../pages/EditBook";
 // importing main layout
 import MainLayout from "../layouts/MainLayout";
 
@@ -41,6 +42,9 @@ const mainRoutes = {
         {
             path: "/create-book",
             element: <CreateBook />,
+        },
+        {
+            path: "/edit-book/:id",
         },
     ],
 };

@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import { BookListContext } from "../context/BookListProvider";
+import { useNavigate } from "react-router-dom";
 
 function CreateBook() {
+    const navigate = useNavigate();
+
+    const { books, setBooks } = useContext(BookListContext);
+
     // form validation
     const validationSchema = yup.object({
         poster: yup.string().required(),
@@ -22,7 +28,20 @@ function CreateBook() {
         validationSchema: validationSchema,
         onSubmit: (values) => {
             // step 1 : append to the existing book
-            console.log(values);
+
+            setBooks((prev) => {
+                let temp = prev.length;
+                const newBook = {
+                    id: temp + 1,
+                    name: values.bookName,
+                    rating: values.bookRating,
+                    summary: values.bookSummary,
+                    poster: values.poster,
+                };
+                return [...prev, newBook];
+            });
+            alert("Book Created Successfully");
+            navigate("/books");
         },
     });
 

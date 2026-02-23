@@ -6,8 +6,11 @@ function Book({ poster, name, rating, summary, bookId }) {
     const navigate = useNavigate();
 
     const handleNavigate = (id) => {
-        console.log(id);
-        navigate(`/books/${id}`)
+        navigate(`/books/${id}`);
+    };
+
+    const handleEditBook = (id) => {
+        navigate(`/edit-book/${id}`);
     };
 
     const [like, setLike] = useState(0);
@@ -28,6 +31,7 @@ function Book({ poster, name, rating, summary, bookId }) {
                 </div>
                 <div className="summary">{summary}</div>
                 <button onClick={() => handleNavigate(bookId)}>View Book</button>
+                <button onClick={() => handleEditBook(bookId)}>Edit Book</button>
                 <div>
                     <button onClick={handleLike}>Like - {like}</button>
                     <button onClick={handleDislike}>Dislike - {dislike}</button>
