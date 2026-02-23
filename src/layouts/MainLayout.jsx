@@ -47,6 +47,11 @@ function MainLayout() {
                             </Link>
                         </li>
                         <li>
+                            <Link to="/books" className="link" style={linkTagStyle}>
+                                All Books
+                            </Link>
+                        </li>
+                        <li>
                             <Link to="/create-book" className="link" style={linkTagStyle}>
                                 Create Book
                             </Link>

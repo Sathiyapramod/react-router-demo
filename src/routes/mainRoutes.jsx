@@ -5,6 +5,7 @@ import JavaScript from "../pages/JavaScript";
 import Contact from "../pages/Contact";
 import BookList from "../pages/BookList";
 import ViewBook from "../pages/ViewBook";
+import CreateBook from "../pages/CreateBook";
 // importing main layout
 import MainLayout from "../layouts/MainLayout";
 
@@ -36,6 +37,10 @@ const mainRoutes = {
         {
             path: "/books/:bookId",
             element: <ViewBook />,
+        },
+        {
+            path: "/create-book",
+            element: <CreateBook />,
         },
     ],
 };

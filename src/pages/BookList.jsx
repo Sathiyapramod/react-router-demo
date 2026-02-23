@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import INITIAL_BOOK_LIST from "../config/books";
+import React, { useContext } from "react";
 import Book from "../components/Book";
+import { BookListContext } from "../context/BookListProvider";
 
 function BookList() {
-    const [books, setBooks] = useState(INITIAL_BOOK_LIST);
+    // destructure the context
+    const { books } = useContext(BookListContext);
+
     return (
         <div>
             <h1>My List of Books</h1>
