@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 function Book({ poster, name, rating, summary, bookId }) {
     // declare one variable for handling navigation
@@ -30,7 +31,20 @@ function Book({ poster, name, rating, summary, bookId }) {
                     <span>{rating}</span>
                 </div>
                 <div className="summary">{summary}</div>
-                <button onClick={() => handleNavigate(bookId)}>View Book</button>
+                {/* <button onClick={() => handleNavigate(bookId)}>View Book</button> */}
+
+                <Button
+                    variant="contained"
+                    sx={{
+                        backgroundColor: "green",
+                        padding: "12px",
+                        margin: "12px",
+                    }}
+                    onClick={() => handleNavigate(bookId)}
+                >
+                    View Book
+                </Button>
+
                 <button onClick={() => handleEditBook(bookId)}>Edit Book</button>
                 <div>
                     <button onClick={handleLike}>Like - {like}</button>

@@ -7,6 +7,8 @@ import BookList from "../pages/BookList";
 import ViewBook from "../pages/ViewBook";
 import CreateBook from "../pages/CreateBook";
 import EditBook from "../pages/EditBook";
+import Products from "../pages/Products";
+import ProductDetail from "../pages/ProductDetail";
 // importing main layout
 import MainLayout from "../layouts/MainLayout";
 
@@ -45,7 +47,17 @@ const mainRoutes = {
         },
         {
             path: "/edit-book/:id",
+            element: <EditBook />,
         },
+        {
+            path: "/products",
+            element: <Products />,
+        },
+        {
+            path: "/products/:id",
+            element :<ProductDetail />
+            
+        }
     ],
 };
 

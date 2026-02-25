@@ -1,6 +1,6 @@
 header {
   background-color: white;
-    color: black;
+  color: black;
     border-bottom: 1px solid black;
     margin-bottom: 50px;
 }
@@ -26,10 +26,10 @@ footer {
 }
 
 .outlet {
-  height: auto;
+  height: 100vh;
 }
 
-form {
+.form {
   display: flex;
   flex-direction: column;
   justify-self: center;
@@ -83,6 +83,7 @@ button {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
 }
+
 .theme-icon {
   width: 60px;
   height: 60px;

@@ -10,7 +10,7 @@ function App() {
         <ThemeProvider>
             <BookListProvider>
                 <div className="container">
-                    <RouterProvider router={router} />;
+                    <RouterProvider router={router} />
                 </div>
             </BookListProvider>
         </ThemeProvider>

@@ -57,6 +57,11 @@ function MainLayout() {
                             </Link>
                         </li>
                         <li>
+                            <Link to="/products" className="link" style={linkTagStyle}>
+                                All Products
+                            </Link>
+                        </li>
+                        <li>
                             <button className="theme-icon" onClick={handleClick}>
                                 {theme === false ? (
                                     <img src={DarkMode} alt="dark_mode" width={40} height={40} />
