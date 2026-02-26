@@ -34,7 +34,7 @@ class API {
     }
 }
 
-// create one instance 
-const myAPI = new API;
+// create one instance
+const myAPI = new API();
 
-export default myAPI
+export default myAPI;

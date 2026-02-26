@@ -23,7 +23,7 @@ function Products() {
             };
             try {
                 //
-                const response = await myAPI.createProducts(body)
+                const response = await myAPI.createProducts(body);
                 console.log(response);
                 if (response.status == 201) {
                     //  todo
@@ -55,7 +55,7 @@ function Products() {
     // API call for products
     async function getAllProducts() {
         try {
-            const response = await myAPI.getAllProducts()
+            const response = await myAPI.getAllProducts();
             // check your status
             if (response.status !== 200) {
                 // bad request
